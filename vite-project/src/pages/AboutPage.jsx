@@ -193,6 +193,12 @@ function AboutPage() {
           </div>
         </section>
       </main>
+      <footer className="mx-auto flex max-w-7xl flex-col gap-3 border-t border-[#20231e]/10 px-6 py-7 text-xs text-[#777a71] sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-14">
+        <p>© 2026 Forma Studio. Made with intention.</p>
+        <a className="transition hover:text-[#20231e]" href="/">
+          Back to home ↑
+        </a>
+      </footer>
     </div>
   )
 }
