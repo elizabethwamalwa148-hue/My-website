@@ -1,27 +1,8 @@
-# Forma Studio
+Environment setup
 
-A responsive creative-studio landing page built with React and Tailwind CSS.
+This project uses a `.env` file for its settings.
 
-## Run locally
+Steps
 
-```sh
-npm install
-npm run dev
-```
-
-Tailwind CSS is loaded from its browser CDN for this small demo, so the page
-needs an internet connection to render its utility classes. For production,
-install Tailwind as a Vite plugin and generate the styles during the build.
-
-## Project structure
-
-```text
-src/
-  components/
-    icons/
-      ArrowIcon.jsx
-    ProjectCard.jsx
-  App.jsx
-  index.css
-  main.jsx
-```
+1. Make a copy of `.env.example` and name it `.env`
+2. Open `.env` and type in your own values
