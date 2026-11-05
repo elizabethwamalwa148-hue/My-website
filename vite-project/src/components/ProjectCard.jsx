@@ -1,4 +1,4 @@
-import ArrowIcon from './icons/ArrowIcon.jsx'
+import ArrowIcon from './icons/ArrowIcon.jsx';
 
 function ProjectCard({ project }) {
   return (
@@ -20,13 +20,15 @@ function ProjectCard({ project }) {
       </a>
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h3 className="text-xl font-medium tracking-[-0.04em]">{project.name}</h3>
+          <h3 className="text-xl font-medium tracking-[-0.04em]">
+            {project.name}
+          </h3>
           <p className="mt-1 text-sm text-[#777a71]">{project.category}</p>
         </div>
         <span className="pt-1 text-xs text-[#777a71]">{project.number}</span>
       </div>
     </article>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

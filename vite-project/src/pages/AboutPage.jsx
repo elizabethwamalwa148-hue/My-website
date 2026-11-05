@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import ArrowIcon from '../components/icons/ArrowIcon.jsx'
+import { useState } from 'react';
+import ArrowIcon from '../components/icons/ArrowIcon.jsx';
 
 const values = [
   {
@@ -20,10 +20,10 @@ const values = [
     description:
       'The strongest partnerships are built on honesty, generosity, and making room for the people behind every project.',
   },
-]
+];
 
 function AboutPage() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen overflow-hidden bg-[#faf9f6] text-[#20231e]">
@@ -47,12 +47,16 @@ function AboutPage() {
 
           <button
             aria-expanded={menuOpen}
-            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label={
+              menuOpen ? 'Close navigation menu' : 'Open navigation menu'
+            }
             className="grid h-10 w-10 place-items-center rounded-full border border-[#20231e]/15 md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             type="button"
           >
-            <span className="text-xl leading-none">{menuOpen ? '×' : '☰'}</span>
+            <span className="text-xl leading-none">
+              {menuOpen ? '×' : '☰'}
+            </span>
           </button>
 
           <div
@@ -83,8 +87,8 @@ function AboutPage() {
       <main>
         <section className="mx-auto max-w-7xl px-6 pb-20 pt-16 sm:px-10 sm:pb-24 sm:pt-20 lg:px-14 lg:pb-28 lg:pt-24">
           <p className="mb-7 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#686b63]">
-            <span className="h-2 w-2 rounded-full bg-[#9bd344]" />
-            A little about us
+            <span className="h-2 w-2 rounded-full bg-[#9bd344]" />A little about
+            us
           </p>
           <div className="grid items-end gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
             <h1 className="text-[clamp(3.5rem,9vw,7.5rem)] font-medium leading-[0.91] tracking-[-0.085em]">
@@ -134,11 +138,17 @@ function AboutPage() {
               <div className="mt-8 flex gap-10 border-t border-[#20231e]/15 pt-6">
                 <div>
                   <p className="text-3xl font-medium tracking-[-0.06em]">24</p>
-                  <p className="mt-1 text-sm text-[#777a71]">Brands brought to life</p>
+                  <p className="mt-1 text-sm text-[#777a71]">
+                    Brands brought to life
+                  </p>
                 </div>
                 <div>
-                  <p className="text-3xl font-medium tracking-[-0.06em]">8 yrs</p>
-                  <p className="mt-1 text-sm text-[#777a71]">Making things matter</p>
+                  <p className="text-3xl font-medium tracking-[-0.06em]">
+                    8 yrs
+                  </p>
+                  <p className="mt-1 text-sm text-[#777a71]">
+                    Making things matter
+                  </p>
                 </div>
               </div>
             </div>
@@ -181,7 +191,8 @@ function AboutPage() {
               <h2 className="max-w-2xl text-5xl font-medium leading-[1.02] tracking-[-0.07em] sm:text-7xl">
                 Maybe it starts
                 <br />
-                with <span className="font-serif italic text-[#c4f06a]">you.</span>
+                with{' '}
+                <span className="font-serif italic text-[#c4f06a]">you.</span>
               </h2>
             </div>
             <a
@@ -200,7 +211,7 @@ function AboutPage() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
 
-export default AboutPage
+export default AboutPage;
