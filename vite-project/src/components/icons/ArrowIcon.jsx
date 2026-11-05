@@ -1,11 +1,6 @@
 function ArrowIcon({ diagonal = false }) {
   return (
-    <svg
-      aria-hidden="true"
-      className="h-4 w-4"
-      fill="none"
-      viewBox="0 0 16 16"
-    >
+    <svg aria-hidden="true" className="h-4 w-4" fill="none" viewBox="0 0 16 16">
       {diagonal ? (
         <path
           d="M4 12 12 4M5 4h7v7"
@@ -24,7 +19,7 @@ function ArrowIcon({ diagonal = false }) {
         />
       )}
     </svg>
-  )
+  );
 }
 
-export default ArrowIcon
+export default ArrowIcon;

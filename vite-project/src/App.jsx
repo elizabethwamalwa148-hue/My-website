@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import ProjectCard from './components/ProjectCard.jsx'
-import ArrowIcon from './components/icons/ArrowIcon.jsx'
+import { useState } from 'react';
+import ProjectCard from './components/ProjectCard.jsx';
+import ArrowIcon from './components/icons/ArrowIcon.jsx';
 
 const projects = [
   {
@@ -30,12 +30,12 @@ const projects = [
     imageAlt: 'A considered edit of everyday clothing',
     color: 'bg-[#e8e4df]',
   },
-]
+];
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => setMenuOpen(false)
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <div className="min-h-screen overflow-hidden bg-[#faf9f6] text-[#20231e]">
@@ -60,12 +60,16 @@ function App() {
 
           <button
             aria-expanded={menuOpen}
-            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label={
+              menuOpen ? 'Close navigation menu' : 'Open navigation menu'
+            }
             className="grid h-10 w-10 place-items-center rounded-full border border-[#20231e]/15 md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             type="button"
           >
-            <span className="text-xl leading-none">{menuOpen ? '×' : '☰'}</span>
+            <span className="text-xl leading-none">
+              {menuOpen ? '×' : '☰'}
+            </span>
           </button>
 
           <div
@@ -142,12 +146,16 @@ function App() {
               />
             </div>
             <div className="absolute -bottom-5 right-3 rounded-full border border-[#20231e]/15 bg-[#faf9f6] px-4 py-2 text-xs text-[#686b63] sm:right-8">
-              Thoughtful by nature <span className="ml-1 text-[#7b9d36]">✳</span>
+              Thoughtful by nature{' '}
+              <span className="ml-1 text-[#7b9d36]">✳</span>
             </div>
           </div>
         </section>
 
-        <section className="bg-[#efeee8] px-6 py-20 sm:px-10 sm:py-24 lg:px-14" id="work">
+        <section
+          className="bg-[#efeee8] px-6 py-20 sm:px-10 sm:py-24 lg:px-14"
+          id="work"
+        >
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 flex flex-col gap-4 sm:mb-14 sm:flex-row sm:items-end sm:justify-between">
               <div>
@@ -181,7 +189,8 @@ function App() {
               Small team, open minds
             </p>
             <h2 className="max-w-xl text-5xl font-medium leading-[1.02] tracking-[-0.075em] sm:text-7xl">
-              Good work starts with a good <span className="font-serif italic">why.</span>
+              Good work starts with a good{' '}
+              <span className="font-serif italic">why.</span>
             </h2>
           </div>
           <div className="flex flex-col justify-end">
@@ -193,11 +202,15 @@ function App() {
             <div className="mt-10 grid grid-cols-2 gap-6 border-t border-[#20231e]/15 pt-6">
               <div>
                 <p className="text-3xl font-medium tracking-[-0.06em]">24</p>
-                <p className="mt-1 text-sm text-[#777a71]">Brands brought to life</p>
+                <p className="mt-1 text-sm text-[#777a71]">
+                  Brands brought to life
+                </p>
               </div>
               <div>
                 <p className="text-3xl font-medium tracking-[-0.06em]">8 yrs</p>
-                <p className="mt-1 text-sm text-[#777a71]">Making things matter</p>
+                <p className="mt-1 text-sm text-[#777a71]">
+                  Making things matter
+                </p>
               </div>
             </div>
           </div>
@@ -212,7 +225,10 @@ function App() {
               <h2 className="max-w-2xl text-5xl font-medium leading-[1.02] tracking-[-0.07em] sm:text-7xl">
                 Let&apos;s make
                 <br />
-                something <span className="font-serif italic text-[#c4f06a]">matter.</span>
+                something{' '}
+                <span className="font-serif italic text-[#c4f06a]">
+                  matter.
+                </span>
               </h2>
             </div>
             <a
@@ -232,7 +248,7 @@ function App() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
