@@ -26,8 +26,8 @@ function AboutPage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#faf9f6] text-[#20231e]">
-      <header className="relative z-10 border-b border-[#20231e]/10 bg-[#faf9f6]">
+    <div className="min-h-screen overflow-hidden bg-canvas text-ink">
+      <header className="sticky top-0 z-20 border-b border-ink/10 bg-canvas/95 backdrop-blur-md">
         <nav
           aria-label="Main navigation"
           className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-10 lg:px-14"
@@ -60,7 +60,7 @@ function AboutPage() {
           </button>
 
           <div
-            className={`${menuOpen ? 'flex' : 'hidden'} absolute left-0 right-0 top-full flex-col gap-6 border-b border-[#20231e]/10 bg-[#faf9f6] px-6 py-6 text-sm md:static md:flex md:flex-row md:items-center md:gap-10 md:border-0 md:bg-transparent md:p-0`}
+            className={`${menuOpen ? 'flex' : 'hidden'} absolute left-0 right-0 top-full flex-col gap-6 border-b border-ink/10 bg-canvas px-6 py-6 text-sm md:static md:flex md:flex-row md:items-center md:gap-10 md:border-0 md:bg-transparent md:p-0`}
           >
             <a
               className="text-[#686b63] transition hover:text-[#20231e]"
@@ -204,11 +204,13 @@ function AboutPage() {
           </div>
         </section>
       </main>
-      <footer className="mx-auto flex max-w-7xl flex-col gap-3 border-t border-[#20231e]/10 px-6 py-7 text-xs text-[#777a71] sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-14">
-        <p>© 2026 Forma Studio. Made with intention.</p>
-        <a className="transition hover:text-[#20231e]" href="/">
-          Back to home ↑
-        </a>
+      <footer className="border-t border-ink/10 bg-[#eae8df]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-7 text-xs text-[#777a71] sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-14">
+          <p>© 2026 Forma Studio. Made with intention.</p>
+          <a className="transition hover:text-ink" href="/">
+            Back to home ↑
+          </a>
+        </div>
       </footer>
     </div>
   );
