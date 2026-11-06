@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProjectCard from './components/ProjectCard.jsx';
 import ArrowIcon from './components/icons/ArrowIcon.jsx';
+import AboutPage from './pages/AboutPage.jsx';
 
 const projects = [
   {
@@ -32,14 +34,14 @@ const projects = [
   },
 ];
 
-function App() {
+function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#faf9f6] text-[#20231e]">
-      <header className="relative z-10 border-b border-[#20231e]/10 bg-[#faf9f6]">
+    <div className="min-h-screen overflow-hidden bg-canvas text-ink">
+      <header className="sticky top-0 z-20 border-b border-ink/10 bg-canvas/95 backdrop-blur-md">
         <nav
           aria-label="Main navigation"
           className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-10 lg:px-14"
@@ -73,7 +75,7 @@ function App() {
           </button>
 
           <div
-            className={`${menuOpen ? 'flex' : 'hidden'} absolute left-0 right-0 top-full flex-col gap-6 border-b border-[#20231e]/10 bg-[#faf9f6] px-6 py-6 text-sm md:static md:flex md:flex-row md:items-center md:gap-10 md:border-0 md:bg-transparent md:p-0`}
+            className={`${menuOpen ? 'flex' : 'hidden'} absolute left-0 right-0 top-full flex-col gap-6 border-b border-ink/10 bg-canvas px-6 py-6 text-sm md:static md:flex md:flex-row md:items-center md:gap-10 md:border-0 md:bg-transparent md:p-0`}
           >
             <a
               className="text-[#686b63] transition hover:text-[#20231e]"
@@ -84,7 +86,7 @@ function App() {
             </a>
             <a
               className="text-[#686b63] transition hover:text-[#20231e]"
-              href="#about"
+              href="/about"
               onClick={closeMenu}
             >
               About
@@ -145,7 +147,7 @@ function App() {
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=90"
               />
             </div>
-            <div className="absolute -bottom-5 right-3 rounded-full border border-[#20231e]/15 bg-[#faf9f6] px-4 py-2 text-xs text-[#686b63] sm:right-8">
+            <div className="absolute -bottom-5 right-3 rounded-full border border-[#20231e]/15 bg-[#f3f1e9] px-4 py-2 text-xs text-[#686b63] sm:right-8">
               Thoughtful by nature{' '}
               <span className="ml-1 text-[#7b9d36]">✳</span>
             </div>
@@ -241,13 +243,27 @@ function App() {
         </section>
       </main>
 
-      <footer className="mx-auto flex max-w-7xl flex-col gap-3 border-t border-[#20231e]/10 px-6 py-7 text-xs text-[#777a71] sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-14">
-        <p>© 2026 Forma Studio. Made with intention.</p>
-        <a className="transition hover:text-[#20231e]" href="#home">
-          Back to top ↑
-        </a>
+      <footer className="border-t border-ink/10 bg-[#eae8df]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-7 text-xs text-[#777a71] sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-14">
+          <p>© 2026 Forma Studio. Made with intention.</p>
+          <a className="transition hover:text-ink" href="#home">
+            Back to top ↑
+          </a>
+        </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
